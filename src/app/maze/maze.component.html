@@ -1,0 +1,20 @@
+
+<div id='maze'>
+
+<div *ngFor = 'let row of matrix' class ='row'>
+
+  <div *ngFor = 'let col of row' class ='col' >
+
+    <img  *ngIf='(col.render)' id = 'imageId' src='{{col.image}}'>
+    <img  *ngIf='(col.enemy)' id = 'enemyImageId' src='{{col.image}}'>
+
+    <span *ngIf='!(col.render) && !(col.enemy)' >{{ col.image }}</span>
+
+    </div>
+
+
+</div>
+
+</div>
+
+
